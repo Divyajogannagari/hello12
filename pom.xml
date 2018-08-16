@@ -40,7 +40,7 @@
 						<username>divyaj</username>
 						<password>Savithri@143</password>
 						<applicationName>helloFromJenkins</applicationName>
-						<environment>SANDBOX</environment>
+						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
 						<properties>
 							
