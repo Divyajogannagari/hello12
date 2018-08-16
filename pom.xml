@@ -40,7 +40,6 @@
 						<username>divyaj</username>
 						<password>Savithri@143</password>
 						<applicationName>helloFromJenkins</applicationName>
-						<businessGroup>wipro</businessGroup>
 						<environment>SANDBOX</environment>
 						<workerType>MICRO</workerType>
 						<properties>
