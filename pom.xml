@@ -15,7 +15,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.1.1</app.runtime>
-		<mule.maven.plugin.version>3.1.2</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.1.6</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -26,6 +26,31 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<username>divyaj</username>
+						<password>Savithri@143</password>
+						<applicationName>helloFromJenkins</applicationName>
+						<businessGroup>wipro</businessGroup>
+						<environment>SANDBOX</environment>
+						<workerType>MICRO</workerType>
+						<properties>
+							
+							<http.port>8081</http.port>
+						</properties>
+					</cloudHubDeployment>
+					<sharedLibraries>
+				
+					</sharedLibraries>
 				</configuration>
 			</plugin>
 		</plugins>
