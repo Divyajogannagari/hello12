@@ -7,8 +7,11 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d7956229-2aea-4303-969e-4897be32d4ec" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="a251d583-ddad-4206-8788-cec5e17acbe4" >
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+	</http:listener-config>
 	<flow name="hello1Flow" doc:id="6ff63cde-193b-4c15-96f8-882114399e18" >
-		<http:listener doc:name="Listener" doc:id="1cc417f5-9494-45b9-bd91-9a6246d33fd4" config-ref="HTTP_Listener_config" path="/"/>
+		<http:listener doc:name="Listener" doc:id="1312a7ff-9262-45c1-93bb-6af9c23ee200" config-ref="HTTP_Listener_config1" path="/"/>
 		<set-payload value='#["Changed yo"]' doc:name="Set Payload" doc:id="6fd1b175-55c3-4df3-9813-27ac050209e5" />
 	</flow>
 </mule>
